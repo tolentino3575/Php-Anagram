@@ -20,32 +20,48 @@
 
         function test_AnagramGenerator_Array()
         {
-          //Arrange
-          $test_AnagramGenerator = new AnagramGenerator;
-          $input = "cat";
+            //Arrange
+            $test_AnagramGenerator = new AnagramGenerator;
+            $input = "cat";
 
-          //Act
-          $result = $test_AnagramGenerator->arrayOutput($input);
+            //Act
+            $result = $test_AnagramGenerator->arrayOutput($input);
 
-          //Assert
-          $this->assertEquals(array('c', 'a', 't'), $result);
+            //Assert
+            $this->assertEquals(array('c', 'a', 't'), $result);
         }
 
 
-        // function test_AnagramGenerator_Sort()
-        // {
-        //
-        //   //Arrange
-        //   $test_AnagramGenerator = new AnagramGenerator;
-        //   $input = "apple";
-        //
-        //   //Act
-        //   $result = $test_AnagramGenerator->sortOutput($input);
-        //
-        //   //Assert
-        //   $this->assertEquals(array('a', 'e', 'l', 'p', 'p'), $result);
-        //
-        // }
+        function test_AnagramGenerator_Sort()
+        {
+
+            //Arrange
+            $test_AnagramGenerator = new AnagramGenerator;
+            $input = "the";
+
+            //Act
+            $result = $test_AnagramGenerator->sortOutput($input);
+
+            //Assert
+            $this->assertEquals(array('e', 'h', 't'), $result);
+
+        }
+
+        function test_AnagramGenerator_Match()
+        {
+
+            //Arrange
+            $test_AnagramGenerator = new AnagramGenerator;
+            $input1 = "pig";
+            $input2 = "pig";
+
+            //Act
+            $result = $test_AnagramGenerator->matchOutput($input1, $input2);
+
+            //Assert
+            $this->assertEquals(true, $result);
+
+        }
     }
 
 ?>
