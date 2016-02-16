@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css'>
+            <link rel="stylesheet" href="css/styles.css" media="screen">
+            <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <div class="container">
+
+        <h1>Anagrams!</h1>
+            <form action="/">
+                <label for="word">Enter a word!</label>
+                <input id="word" name="word" type="text"><br><br>
+                <label for="possible">Enter possible matches below!</label><br><br>
+                <input id="possible" name="possible" type="text"></span>
+                <button class="btn btn-sm btn-danger" type="submit">Click to see matches!!</button><br>
+<!--
+                <label for="match2"></label></span><br><br>
+                <input id="match2" name="match2" type="text"><span class="glyphicon glyphicon-ok"></span>
+
+                <label for="match3"></label><br><br>
+                <input id="match3" name="match3" type="text"><span class="glyphicon glyphicon-ok"></span>
+
+                <label for="match4"></label><br><br>
+                <input id="match4" name="match4" type="text"><span class="glyphicon glyphicon-ok"></span>
+
+                <label for="match5"></label><br><br>
+                <input id="match5" name="match5" type="text"><span class="glyphicon glyphicon-ok"></span> -->
+            </form>
+            {% if result is not empty %}
+                {% for item in result %}
+                <p>{{ item }}</p>
+                {% endfor %}
+            {% else %}
+                <p>
+                    result is empty
+                </p>
+            {% endif %}
+        </div>
+    </body>
+</html>

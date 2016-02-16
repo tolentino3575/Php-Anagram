@@ -53,13 +53,13 @@
             //Arrange
             $test_AnagramGenerator = new AnagramGenerator;
             $input1 = "pig";
-            $input2 = "pig";
+            $possibleArray = array("pig", "pug", "gip");
 
             //Act
-            $result = $test_AnagramGenerator->matchOutput($input1, $input2);
+            $result = $test_AnagramGenerator->matchOutput($input1, $possibleArray);
 
             //Assert
-            $this->assertEquals(true, $result);
+            $this->assertEquals(array('pig', 'gip'), $result);
 
         }
     }

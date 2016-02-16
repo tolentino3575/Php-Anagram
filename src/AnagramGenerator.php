@@ -19,15 +19,22 @@
             return $sortWord;
         }
 
-        function matchOutput($input_word1, $input_word2)
+        function matchOutput($input_word, $possibleArray)
         {
-            $sortWord1 = str_split($input_word1);
-            $sortedWord1 = sort($sortWord1);
-            $sortWord2 = str_split($input_word2);
-            $sortedWord2 = sort($sortWord2);
-            return $sortWord1 == $sortWord2;
+            var_dump($possibleArray);
+            $matchedArray = array();
+            $input_word = $this->sortOutput($input_word);
+            foreach ($possibleArray as $possible) {
+                $sorted_possible = $this->sortOutput($possible);
+                if ($sorted_possible == $input_word) {
+                    array_push($matchedArray, $possible);
+                } else {
+                    var_dump("IT DIDNT WORK!!! NOOO!");
+                }
+            }
+            var_dump($matchedArray);
+            return $matchedArray;
         }
-
     }
 
 ?>
