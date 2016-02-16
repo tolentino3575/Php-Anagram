@@ -17,6 +17,35 @@
             //Assert
             $this->assertEquals("the", $result);
         }
+
+        function test_AnagramGenerator_Array()
+        {
+          //Arrange
+          $test_AnagramGenerator = new AnagramGenerator;
+          $input = "cat";
+
+          //Act
+          $result = $test_AnagramGenerator->arrayOutput($input);
+
+          //Assert
+          $this->assertEquals(array('c', 'a', 't'), $result);
+        }
+
+
+        // function test_AnagramGenerator_Sort()
+        // {
+        //
+        //   //Arrange
+        //   $test_AnagramGenerator = new AnagramGenerator;
+        //   $input = "apple";
+        //
+        //   //Act
+        //   $result = $test_AnagramGenerator->sortOutput($input);
+        //
+        //   //Assert
+        //   $this->assertEquals(array('a', 'e', 'l', 'p', 'p'), $result);
+        //
+        // }
     }
 
 ?>

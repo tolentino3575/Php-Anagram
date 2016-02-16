@@ -6,6 +6,11 @@
         {
             return $input_word;
         }
+
+        function arrayOutput($input_word)
+        {
+            return str_split($input_word);
+        }
     }
 
 ?>
