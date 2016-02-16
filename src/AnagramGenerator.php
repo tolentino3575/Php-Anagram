@@ -21,18 +21,14 @@
 
         function matchOutput($input_word, $possibleArray)
         {
-            var_dump($possibleArray);
             $matchedArray = array();
             $input_word = $this->sortOutput($input_word);
             foreach ($possibleArray as $possible) {
                 $sorted_possible = $this->sortOutput($possible);
                 if ($sorted_possible == $input_word) {
                     array_push($matchedArray, $possible);
-                } else {
-                    var_dump("IT DIDNT WORK!!! NOOO!");
                 }
             }
-            var_dump($matchedArray);
             return $matchedArray;
         }
     }

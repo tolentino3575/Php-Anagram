@@ -10,7 +10,7 @@
         <div class="container">
 
         <h1>Anagrams!</h1>
-            <form action="/">
+            <form action="/result">
                 <label for="word">Enter a word!</label>
                 <input id="word" name="word" type="text"><br><br>
                 <label for="possible">Enter possible matches below!</label><br><br>
@@ -30,12 +30,13 @@
                 <input id="match5" name="match5" type="text"><span class="glyphicon glyphicon-ok"></span> -->
             </form>
             {% if result is not empty %}
-                {% for item in result %}
-                <p>{{ item }}</p>
+                {% for word in result %}
+                <h5>Here are your anagrams!</h5>
+                <p>{{ word }}</p>
                 {% endfor %}
             {% else %}
                 <p>
-                    result is empty
+                    There are no anagrams!
                 </p>
             {% endif %}
         </div>
